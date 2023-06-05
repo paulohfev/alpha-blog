@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   root "pages#home"
   get "about", to: "pages#about"
-  # only makes the show action available from the resources-generated articles routes
-  resources :articles, only: [:show]
+  # only makes the actions in the array available from the resources-generated articles routes
+  resources :articles, only: [:show, :index]
 end
